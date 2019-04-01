@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11843" started-at="2018-01-07T12:39:34Z" finished-at="2018-01-07T12:39:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11843" started-at="2018-01-07T12:39:34Z" finished-at="2018-01-07T12:39:45Z">
+      <class name="org.arpit.java2blog.test.CategoryServiceTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:org.arpit.java2blog.test.CategoryServiceTest@1bce4f0a]" name="init" is-config="true" duration-ms="3095" started-at="2018-01-07T19:39:34Z" finished-at="2018-01-07T19:39:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="addNewCategory()[pri:0, instance:org.arpit.java2blog.test.CategoryServiceTest@1bce4f0a]" name="addNewCategory" duration-ms="78" started-at="2018-01-07T19:39:37Z" finished-at="2018-01-07T19:39:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewCategory -->
+        <test-method status="PASS" signature="init()[pri:0, instance:org.arpit.java2blog.test.CategoryServiceTest@1bce4f0a]" name="init" is-config="true" duration-ms="2097" started-at="2018-01-07T19:39:37Z" finished-at="2018-01-07T19:39:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="deleteAuthor()[pri:0, instance:org.arpit.java2blog.test.CategoryServiceTest@1bce4f0a]" name="deleteAuthor" duration-ms="36" started-at="2018-01-07T19:39:39Z" finished-at="2018-01-07T19:39:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAuthor -->
+        <test-method status="PASS" signature="init()[pri:0, instance:org.arpit.java2blog.test.CategoryServiceTest@1bce4f0a]" name="init" is-config="true" duration-ms="2047" started-at="2018-01-07T19:39:39Z" finished-at="2018-01-07T19:39:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getAllCategory()[pri:0, instance:org.arpit.java2blog.test.CategoryServiceTest@1bce4f0a]" name="getAllCategory" duration-ms="106" started-at="2018-01-07T19:39:41Z" finished-at="2018-01-07T19:39:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllCategory -->
+        <test-method status="PASS" signature="init()[pri:0, instance:org.arpit.java2blog.test.CategoryServiceTest@1bce4f0a]" name="init" is-config="true" duration-ms="2041" started-at="2018-01-07T19:39:41Z" finished-at="2018-01-07T19:39:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getCategoryById()[pri:0, instance:org.arpit.java2blog.test.CategoryServiceTest@1bce4f0a]" name="getCategoryById" duration-ms="16" started-at="2018-01-07T19:39:43Z" finished-at="2018-01-07T19:39:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCategoryById -->
+        <test-method status="PASS" signature="init()[pri:0, instance:org.arpit.java2blog.test.CategoryServiceTest@1bce4f0a]" name="init" is-config="true" duration-ms="2280" started-at="2018-01-07T19:39:43Z" finished-at="2018-01-07T19:39:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="updateCategory()[pri:0, instance:org.arpit.java2blog.test.CategoryServiceTest@1bce4f0a]" name="updateCategory" duration-ms="20" started-at="2018-01-07T19:39:45Z" finished-at="2018-01-07T19:39:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateCategory -->
+      </class> <!-- org.arpit.java2blog.test.CategoryServiceTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

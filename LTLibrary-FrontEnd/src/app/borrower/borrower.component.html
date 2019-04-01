@@ -1,0 +1,434 @@
+<div class=" container-scroller"> 
+    <!--Navbar-->
+    <nav class="navbar bg-info col-lg-12 col-12 p-0 fixed-top navbar-inverse d-flex flex-row">
+      <div class="bg-info text-center navbar-brand-wrapper"> <a class="navbar-brand brand-logo" href="#"><img src="../../assets/images/logo.png" /></a> <a class="navbar-brand brand-logo-mini" href="#"><img src="../../assets/images/logo.png" alt=""></a> </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center">
+        <button class="navbar-toggler navbar-toggler hidden-md-down align-self-center mr-3" type="button" data-toggle="minimize"> <span class="navbar-toggler-icon"></span> </button>
+        <ul class="navbar-nav ml-lg-auto d-flex align-items-center flex-row">
+            <li class="nav-item"> <a class="nav-link" title="Sign out" style="cursor: pointer" (click) = "signOut()"><i class="fa fa-sign-out"></i></a> </li>
+          </ul>
+        <button class="navbar-toggler navbar-toggler-right hidden-lg-up align-self-center" type="button" data-toggle="offcanvas"> <span class="navbar-toggler-icon"></span> </button>
+      </div>
+    </nav>
+    <!--End navbar-->
+    <div class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <nav class="bg-white sidebar sidebar-fixed sidebar-offcanvas bg-info" id="sidebar">
+            <div class="user-info" style="padding-top: 25px;">
+                <img src="{{currentLibLink+currentLibId}}.jpg" alt="Avatar">
+                <p class="name">{{currentLibFName+" "+currentLibLName}}</p>
+                <p class="designation">{{currentLibRole}}</p>
+                <span class="online"></span>
+            </div>
+          <ul class="nav mt-5">
+            <!-- Circulation -->
+            <li class="nav-item"> <a class="nav-link" href="/Borrowing"><span class="menu-title text-white" style="font-size:2rem">Circulation</span> </a></li>
+         
+            <li class="nav-item"> <a class="nav-link" href="/Borrowing"><img src="../../assets/images/SliderBar/Borrowing2.png" alt=""> <span class="menu-title text-white">Borrowing</span> </a></li>
+  
+            <li class="nav-item "> <a class="nav-link" href="/Returning"><img src="../../assets/images/SliderBar/Return.png" alt=""> <span class="menu-title text-white">Returning</span> </a></li>
+   
+            <li class="nav-item">
+              <hr/>
+            </li>
+         <!-- End Circulation -->
+  
+            <!-- Report -->
+            <li class="nav-item"> <a class="nav-link" href="/BookNotReturn"><span class="menu-title text-white" style="font-size:2rem">Report</span> </a></li>
+            <li class="nav-item"> <a class="nav-link"  data-toggle="collapse" href="#CourseCollapse" aria-expanded="false" aria-controls="collapseExample">
+            <img src="../../assets/images/SliderBar/Course.png" alt=""> <span class="menu-title text-white">Report</span><span class="fa fa-arrow-down pull-right text-white"></span> </a> 
+            </li>
+            <div class="collapse" id="CourseCollapse">
+                <li class="nav-item ml-4"> <a class="nav-link" href="/BookNotReturn"><img src="../../assets/images/SliderBar/BookCourse.png" alt=""> <span class="menu-title text-white">Book Not Yet Return</span> </a></li>
+                <li class="nav-item ml-4"> <a class="nav-link" href="/AvailableBook"><img src="../../assets/images/SliderBar/BookCourse.png" alt=""> <span class="menu-title text-white">Available Book</span> </a></li>
+                <li class="nav-item ml-4"> <a class="nav-link" href="/BookByStatus"><img src="../../assets/images/SliderBar/BookCourse.png" alt=""> <span class="menu-title text-white">Book By Status</span> </a></li>
+            </div>
+            <li class="nav-item">
+                <hr/>
+            </li>
+            <!-- End Report -->
+  
+           <!-- Book --> 
+            <li class="nav-item"> <a class="nav-link" href="/Book"><span class="menu-title text-white" style="font-size:2rem">Book</span> </a></li>
+               <!-- Collapse --> 
+            <li class="nav-item"> <a class="nav-link"  data-toggle="collapse" href="#BookCollapse" aria-expanded="false" aria-controls="collapseExample">
+             <img src="../../assets/images/SliderBar/Book.png" alt=""> <span class="menu-title text-white">Book</span><span class="fa fa-arrow-down pull-right text-white"></span> </a> 
+            </li>
+            <div class="collapse" id="BookCollapse">
+                <li class="nav-item ml-4"> <a class="nav-link" href="/BookTitle"><img src="../../assets/images/SliderBar/BookTitle.png" alt=""> <span class="menu-title text-white">Book Title</span> </a></li>
+                <li class="nav-item ml-4"> <a class="nav-link" href="/Book"><img src="../../assets/images/SliderBar/BookList.png" alt=""> <span class="menu-title text-white">Book List</span> </a></li>
+            </div>
+     <!-- Collapse --> 
+            <li class="nav-item"> <a class="nav-link" href="/Category"> <img src="../../assets/images/SliderBar/Categories.png" alt=""> <span class="menu-title text-white">Category</span> </a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/Author"> <img src="../../assets/images/SliderBar/Author.png" alt=""> <span class="menu-title text-white">Author</span> </a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/BookPublisher"> <img src="../../assets/images/SliderBar/BookPublisher.png" alt=""> <span class="menu-title text-white">Publisher</span> </a> </li>
+            <li class="nav-item">
+              <hr/>
+            </li>
+            <!-- End Book --> 
+               
+      <!-- Borrower --> 
+      <li class="nav-item"> <a class="nav-link" href="/Borrower"><span class="menu-title text-white" style="font-size:2rem">Human</span> </a></li>
+     <!-- Collapse --> 
+            <li class="nav-item"> <a class="nav-link"  data-toggle="collapse" href="#BorrowerCollapse" aria-expanded="false" aria-controls="collapseExample">
+             <img src="../../assets/images/SliderBar/customers.png" alt=""> <span class="menu-title text-white">Borrower</span><span class="fa fa-arrow-down pull-right text-white"></span> </a> 
+            </li>
+            <div class="collapse" id="BorrowerCollapse">
+                <li class="nav-item ml-4"> <a class="nav-link" href="/BorrowerType"><img src="../../assets/images/SliderBar/employees.png" alt=""> <span class="menu-title text-white">Borrower Type</span> </a></li>
+                <li class="nav-item ml-4"> <a class="nav-link" href="/Borrower"><img src="../../assets/images/SliderBar/BorrowerList.png" alt=""> <span class="menu-title text-white">Borrower List</span> </a></li>
+            </div>
+     <!-- Collapse --> 
+     <!-- End Borrower --> 
+             <!-- Librarian --> 
+            <li class="nav-item"> <a class="nav-link" href="/Librarian"> <img src="../../assets/images/SliderBar/Librarian.png" alt=""> <span class="menu-title text-white">Librarian</span> </a> </li>
+            <li class="nav-item">
+              <hr/>
+            </li>
+             <!-- End Librarian -->     
+            
+          </ul>
+        </nav>
+        <!-- SIDEBAR ENDS -->
+        
+      <div class="content-wrapper">
+        <div class="card">
+          <div class="card-block">
+            <h5 class="card-title mb-4 text-info">Borrower List</h5>
+
+            <div class="card-header bg-white">
+              <div class=" row justify-content-end" role="group">
+                <div class="col-1">
+                  <button id="btnAdd" class="btn btn-info" (click)="initializeAddForm()">Add</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-block">
+              <table id="tbl" class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr class="">
+                    <th style="width:1px;">No.</th>
+                    <th>University ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>More Info/Edit/Delete</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr class="">
+                    <th>No.</th>
+                    <th>University ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <td></td>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr *ngFor="let borrower of data; let i = index" id="{{borrower.borrowerid}}">
+                    <td>{{i+1}}</td>
+                    <td>{{borrower.schoolid}}</td>
+                    <td>{{borrower.firstname}}</td>
+                    <td>{{borrower.lastname}}</td>
+                    <td>{{getGender(borrower.gender)}}</td>
+                    <td>{{borrower.email}}</td>
+                    <td>{{borrower.phonenumber}}</td>
+                    <td>{{borrower.address}}</td>
+                    <td class="text-center">
+                      <span (click)="getBorrowerById(borrower.borrowerid)" id="moreInfoClick" style="cursor:pointer;" data-toggle="modal" data-target="#modalInfo">
+                        <i class="fa fa-2x text-danger fa-info-circle p-2"></i>
+                      </span>
+                      <span (click)="getBorrowerById(borrower.borrowerid)" id="editClick" style="cursor:pointer;" data-toggle="modal" data-target="#modalEdit">
+                        <i class="fa fa-2x text-danger fa-edit p-2"></i>
+                      </span>
+                      <span (click)="nearlyDelete(borrower.borrowerid)" data-toggle="modal" data-target="#modalDelete" id="deleteClick"
+                        style="cursor:pointer;">
+                        <i class="fa text-danger fa-2x fa-remove p-2"></i>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid clearfix text">
+          <span class="float-right">
+            <a href="#">LTLibrary</a> &copy; 2017 </span>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<!--Modal Add-->
+<div id="modalAdd" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New Borrower</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">University ID:</label>
+            <input [(ngModel)]="schoolId" type="text" class="form-control p_input" placeholder="University ID">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">First Name:</label>
+            <input [(ngModel)]="firstName" type="text" class="form-control p_input" placeholder="FirstName">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Last Name:</label>
+            <input [(ngModel)]="lastName" type="text" class="form-control p_input" placeholder="LastName">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Bar code:</label>
+            <input [(ngModel)]="barCode" type="text" class="form-control p_input" placeholder="Bar code">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Gender:</label>
+            <label class="col-sm-2 col-form-label">Male
+              <input id="maleRadioAdd" type="radio" name="iCheck" value="male">
+            </label>
+            <label class="col-sm-2 col-form-label">FeMale
+              <input id="femaleRadioAdd" type="radio" name="iCheck" value="female">
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Email:</label>
+            <input [(ngModel)]="email" type="email" class="form-control p_input" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Phone</label>
+            <input [(ngModel)]="phoneNumber" type="text" class="form-control p_input" placeholder="Phone">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Address</label>
+            <input [(ngModel)]="address" type="text" class="form-control p_input" placeholder="Address">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Avatar</label>
+            <input type="file" id = "avatarFile" (change) = "uploadFile($event)" accept='image/jpeg,image/gif,image/png' class="form-control p_input" placeholder="Avatar" >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Borrower Type</label>
+            <select class="js-example-basic-single" id="BorrowerTypeSelectionEditAdd" name="BorrowerTypeEdit" style="width:15rem;">
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Status</label>
+            <label class="col-sm-2 col-form-label">Active
+              <input id="activeRadioAdd" type="radio" name="iCheck2" value="active">
+            </label>
+            <label class="col-sm-2 col-form-label">Inactive
+              <input id="inactiveRadioAdd" type="radio" name="iCheck2" value="inactive">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="checkAddForm()">Add</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal Edit-->
+<div id="modalEdit" class="modal fade" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Borrower</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">University ID:</label>
+            <input [(ngModel)]="schoolIdEdit" type="text" class="form-control p_input" placeholder="University ID">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Student First Name:</label>
+            <input [(ngModel)]="firstNameEdit" type="text" class="form-control p_input" placeholder="FirstName">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Last Name:</label>
+            <input [(ngModel)]="lastNameEdit" type="text" class="form-control p_input" placeholder="LastName">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Bar code:</label>
+            <input [(ngModel)]="barCodeEdit" type="text" class="form-control p_input" placeholder="Bar code">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Gender:</label>
+            <label class="col-sm-2 col-form-label">Male
+              <input id="maleRadio" type="radio" name="iCheck" value="male">
+            </label>
+            <label class="col-sm-2 col-form-label">FeMale
+              <input id="femaleRadio" type="radio" name="iCheck" checked value="female">
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Email:</label>
+            <input [(ngModel)]="emailEdit" type="email" class="form-control p_input" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Phone</label>
+            <input [(ngModel)]="phoneNumberEdit" type="text" class="form-control p_input" placeholder="Phone">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Address</label>
+            <input [(ngModel)]="addressEdit" type="text" class="form-control p_input" placeholder="Address">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Avatar</label>
+            <input type="file" class="form-control p_input" placeholder="Avatar"  (change) = "uploadFile($event)" accept='image/jpeg,image/gif,image/png'>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Borrower Type</label>
+            <select class="js-example-basic-single" id="BorrowerTypeSelectionEdit" name="BorrowerTypeEdit" style="width:15rem;">
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group row">
+            <label class="col-sm-2 col-form-label">Status</label>
+            <label class="col-sm-2 col-form-label">Active
+              <input id="activeRadio" type="radio" name="iCheck2" value = "active">
+            </label>
+            <label class="col-sm-2 col-form-label">Inactive
+              <input id="inactiveRadio" type="radio" name="iCheck2" checked value="inactive">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="  checkEditForm()">Save Changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal Info-->
+<div id="modalInfo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">More Info Borrower</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table id="subTb" class="table table-striped table-bordered table-hover">
+          <thead>
+            <tr class="">
+              <th>Avatar</th>
+              <th>Borrower Type</th>
+              <th>Bar code</th>
+              <th>Status</th>
+              <th>Created Date</th>
+              <th>Created By</th>
+              <th>Updated Date</th>
+              <th>Updated By</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="{{backendLink+avatar}}" alt="" width="100">
+              </td>
+              <td>{{currentBorrowerTypeName}}</td>
+              <td>{{dataEdit.barcode}}</td>
+              <td>{{getStatus(dataEdit.status)}}</td>
+              <td>{{dataEdit.createddate}}</td>
+              <td>{{createdByName}}</td>
+              <td>{{dataEdit.updateddate}}</td>
+              <td>{{updatedByName}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal Delete-->
+<div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <p>Do you really want to delete that item?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="deleteBorrower()">Delete</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
+      </div>
+    </div>
+  </div>
+</div>
